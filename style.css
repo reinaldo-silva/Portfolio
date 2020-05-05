@@ -200,7 +200,7 @@ body::-webkit-scrollbar-thumb{
 #texto2{
     height: 200px;
     position: relative;
-    padding: 0 1000px;
+    padding: 0 auto;
     padding-top: 60px;
     font-size: 50px;
     text-align: center;
@@ -309,8 +309,3 @@ body::-webkit-scrollbar-thumb{
 }
 
 /*----------------------------------------------------------------------------------*/
-/*Animação do scroll arrumar*/
-.scrolling-box {
-    scroll-behavior: smooth;
-    transition: 0.5s;
-  }
