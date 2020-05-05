@@ -200,7 +200,6 @@ body::-webkit-scrollbar-thumb{
 #texto2{
     height: 200px;
     position: relative;
-    padding: 0 100%;
     padding-top: 60px;
     font-size: 50px;
     text-align: center;
