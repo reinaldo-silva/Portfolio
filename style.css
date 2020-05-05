@@ -1,0 +1,316 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/*CSS Barra de navegação*/
+
+nav{
+    display: flex;
+    justify-content: space-around;/*Espaço entre os blocos(div e ul)*/
+    align-items: center;/*alinha no centro do bloco*/
+    min-height: 8vh;/*ALtura minima da nav*/
+    background-color: #15001C;
+    position:fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030
+}
+
+.logo {
+    text-transform: uppercase;
+    letter-spacing: 5px;/*Espaço entre as letras*/
+    font-size: 25px;
+}
+
+.logo a{
+    text-decoration: none;
+    color: rgb(227, 227, 227);
+}
+
+.nav-link li {
+    list-style: none;/*remove formatação do li*/
+    display: flex;
+}
+
+.nav-link {
+    display: flex;
+    justify-content: space-around;
+    width: 40%; /*a ul ira oculpar 30% da tela*/
+}
+
+.nav-link a{
+    color: rgb(227, 227, 227);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;/*negrito*/
+    display: inline-flex;
+    align-items: center;
+    padding: 3vh;
+}
+
+.nav-link img{
+    height: 20px;
+    width: 20px;
+    padding-right: 5px;
+}
+
+.icon {
+    display: none;
+    cursor: pointer;
+}
+
+.icon div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(227, 227, 227);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:1024px){
+    .nav-link{
+        width: 60%;
+    }
+
+}
+
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;/*esconde as barras de rolagens*/
+    }
+
+    .nav-link {
+        position: absolute;/*como se tivesse somente um bloco dentro da div nav-link*/
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #15001C;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);/*onde vai inciar esse bloco a partir da tela inicial que oculpa 100%(0% sua posição atual)*/
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-link li{
+        opacity: 0;/*de 0 a 1*/
+    }
+
+    .icon {
+        display: block;
+    }
+}
+
+.nav-ativa {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px)
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .icon1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .icon2{
+    opacity: 0;
+}
+
+.toggle .icon3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/*--------------------------------------------------------------*/
+
+body{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track{
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: #6649b8;
+}
+
+#home {
+    height: auto;
+    background-color: #8C00AB;
+    margin-top: 8vh;
+    color: seashell;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+#home img{
+    height: 300px;
+    width: 300px;
+    right: 0px;
+}
+
+#titulo{
+    margin-top: 50px;
+    padding: 50px;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.texto{
+    margin: 20px;
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+}
+
+/*Cards de Projects-------------------------------------------------------------------------*/
+.target{
+    position: absolute;
+    top: 0;
+}
+
+
+
+#texto2{
+    height: 200px;
+    position: relative;
+    padding: 0 1000px;
+    padding-top: 60px;
+    font-size: 50px;
+    text-align: center;
+    color: rgb(227, 227, 227);
+    text-transform: uppercase;
+    letter-spacing: 5px;/*Espaço entre as letras*/
+}
+
+.conteudo2 {
+    margin: 0px;
+    min-height: 100vh;
+    background: #3C0152;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+}
+
+
+.projects {
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;/*joga pra linha de baixo caso não caiba na linha os blocos*/
+}
+
+.projects .card{
+    position: relative;
+    cursor: pointer;
+}
+
+.projects .card .face{
+    width: 350px;
+    height: 250px;
+    transition: 0.5s;
+}
+
+.projects .card .face.face1{
+    position: relative;/*estudara  fundo*/
+    background: #8C00AB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /*estudar*/
+    transform: translateY(125px);
+}
+
+.projects .card:hover .face.face1{
+    background: #FBFF05;
+    transform: translateY(0);
+}
+
+.projects .card .face.face1 .content{
+    opacity: 1;
+}
+
+.projects .card .face.face1 .content img{
+    max-width: 150px;
+}
+
+.projects .card .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #15001C;
+    text-align: center;
+    font-size: 1.5em;/*colocar espaçamento e mudar cor da letra*/
+}
+
+.projects .card .face.face2{
+    position: relative;
+    background: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.8);
+    transform: translateY(-125px);
+}
+
+.projects .card:hover .face.face2{
+    transform: translateY(0px);
+}
+
+.projects .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.projects .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 3px;
+    border: 1px solid #333;
+}
+
+.projects .card .face.face2 .content a:hover {
+    background: #333;
+    color: #F2F2F2;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*Animação do scroll arrumar*/
+.scrolling-box {
+    scroll-behavior: smooth;
+    transition: 0.5s;
+  }
