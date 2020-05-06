@@ -163,14 +163,14 @@ body::-webkit-scrollbar-thumb{
     margin-top: 8vh;
     color: seashell;
     display: flex;
-    flex-direction: column;
-    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
 }
 
 #home img{
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
     right: 0px;
     transition: 0.5s;
     transform-origin: right;
@@ -179,16 +179,17 @@ body::-webkit-scrollbar-thumb{
 
 #move[data-scroll="in"]{
     transform: scaleX(1);
-    transition-delay: 1s;
+    transition-delay: 0.7s;
 }
 
 #titulo{
     margin-top: 50px;
-    padding: 50px;
+    width: 350px;
+    margin: 20px;
     font-size: 50px;
     text-transform: uppercase;
     text-align: center;
-    transition: 0.5s;
+    transition: 0.7s;
     transform-origin: left;
     transform: scaleX(0);
 }
@@ -200,7 +201,6 @@ body::-webkit-scrollbar-thumb{
 .texto{
     margin: 20px;
     font-size: 25px;
-    padding: 20px;
     text-align: center;
     transition: 1s;
     opacity: 0;
@@ -229,6 +229,13 @@ body::-webkit-scrollbar-thumb{
     color: rgb(227, 227, 227);
     text-transform: uppercase;
     letter-spacing: 5px;/*Espaço entre as letras*/
+    transition: 0.7s;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+#texto2[data-scroll="in"]{
+    transform: scaleX(1);
 }
 
 .conteudo2 {
