@@ -172,6 +172,14 @@ body::-webkit-scrollbar-thumb{
     height: 300px;
     width: 300px;
     right: 0px;
+    transition: 0.5s;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+#move[data-scroll="in"]{
+    transform: scaleX(1);
+    transition-delay: 1s;
 }
 
 #titulo{
@@ -180,6 +188,13 @@ body::-webkit-scrollbar-thumb{
     font-size: 50px;
     text-transform: uppercase;
     text-align: center;
+    transition: 0.5s;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+#titulo[data-scroll="in"]{
+    transform: scaleX(1);
 }
 
 .texto{
@@ -187,6 +202,13 @@ body::-webkit-scrollbar-thumb{
     font-size: 25px;
     padding: 20px;
     text-align: center;
+    transition: 1s;
+    opacity: 0;
+}
+
+.texto[data-scroll="in"]{
+    opacity: 1;
+    transition-delay: 0.3s;
 }
 
 /*Cards de Projects-------------------------------------------------------------------------*/
@@ -309,3 +331,5 @@ body::-webkit-scrollbar-thumb{
 }
 
 /*----------------------------------------------------------------------------------*/
+
+/*scroll animation*/
