@@ -17,7 +17,10 @@ nav{
     top: 0;
     right: 0;
     left: 0;
-    z-index: 1030
+    z-index: 1030;/*estudar*/
+    opacity:0.95;
+	-moz-opacity: 0.95;
+	filter: alpha(opacity=95);
 }
 
 .logo {
@@ -71,14 +74,14 @@ nav{
     transition: all 0.3s ease;
 }
 
-@media screen and (max-width:1024px){
+@media screen and (max-width:1100px){
     .nav-link{
-        width: 60%;
+        width: 70%;
     }
 
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:900px){
     body{
         overflow-x: hidden;/*esconde as barras de rolagens*/
     }
@@ -106,9 +109,6 @@ nav{
     }
 }
 
-.nav-ativa {
-    transform: translateX(0%);
-}
 
 @keyframes navLinkFade{
     from{
@@ -160,7 +160,7 @@ body::-webkit-scrollbar-thumb{
 #home {
     height: auto;
     background-color: #8C00AB;
-    margin-top: 8vh;
+    padding-top: 8vh;
     color: seashell;
     display: flex;
     flex-wrap: wrap;
@@ -233,6 +233,8 @@ body::-webkit-scrollbar-thumb{
     transition: 0.7s;
     transform-origin: left;
     transform: scaleX(0);
+    display: flex;
+    justify-content: space-around;
 }
 
 #texto2[data-scroll="in"]{
@@ -243,14 +245,13 @@ body::-webkit-scrollbar-thumb{
     margin: 0px;
     min-height: 100vh;
     background: #3C0152;
+    color: seashell;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 10px;
 }
-
 
 .projects {
     width: 1000px;
@@ -269,6 +270,7 @@ body::-webkit-scrollbar-thumb{
     width: 350px;
     height: 250px;
     transition: 0.5s;
+    color: #333;
 }
 
 .projects .card .face.face1{
@@ -340,4 +342,58 @@ body::-webkit-scrollbar-thumb{
 
 /*----------------------------------------------------------------------------------*/
 
-/*scroll animation*/
+.more{
+    position: absolute;
+    right: 0px;
+    height: 85vh;
+    width: 100%;
+    height: 100%;
+    display: flex;/*onde vai inciar esse bloco a partir da tela inicial que oculpa 100%(0% sua posição atual)*/
+    opacity: 0;
+}
+
+
+.nav-ativa{
+    transform: translateX(0%);
+}
+
+.more-ativa{
+    position: relative;
+    opacity: 1;
+}
+
+.project-none{
+    opacity: 0;
+    transition: 0.3s;
+    transform: translateX(-100%);
+    display: none;
+}
+
+.textoMore{
+    margin: 20px;
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+}
+
+#flecha{
+    position: absolute;
+    height: 35px;
+    width: 30px;
+    left: 30px;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.back{
+    opacity: 1 !important;
+    cursor: pointer;
+}
+
+#flecha:hover{
+    width: 50px;
+    height: 40px;
+}
+
+
+
