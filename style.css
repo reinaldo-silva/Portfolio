@@ -12,7 +12,7 @@ nav{
     justify-content: space-around;/*Espaço entre os blocos(div e ul)*/
     align-items: center;/*alinha no centro do bloco*/
     min-height: 8vh;/*ALtura minima da nav*/
-    background-color: #15001C;
+    background-color: #8C8A6C;
     position:fixed;
     top: 0;
     right: 0;
@@ -31,7 +31,7 @@ nav{
 
 .logo a{
     text-decoration: none;
-    color: rgb(227, 227, 227);
+    color: #F0F2BB;
 }
 
 .nav-link li {
@@ -46,7 +46,7 @@ nav{
 }
 
 .nav-link a{
-    color: rgb(227, 227, 227);
+    color: #F0F2BB;
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;/*negrito*/
@@ -69,7 +69,7 @@ nav{
 .icon div{
     width: 25px;
     height: 3px;
-    background-color: rgb(227, 227, 227);
+    background-color: #F0F2BB;
     margin: 5px;
     transition: all 0.3s ease;
 }
@@ -91,7 +91,7 @@ nav{
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: #15001C;
+        background-color: #8C8A6C;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -150,16 +150,16 @@ body::-webkit-scrollbar{
 }
 
 body::-webkit-scrollbar-track{
-    background: #1e1e24;
+    background: #8C8A6C;
 }
 
 body::-webkit-scrollbar-thumb{
-    background: #6649b8;
+    background: #262314;
 }
 
 #home {
     height: auto;
-    background-color: #8C00AB;
+    background-color: #736F38;
     padding-top: 8vh;
     color: seashell;
     display: flex;
@@ -192,6 +192,7 @@ body::-webkit-scrollbar-thumb{
     transition: 0.7s;
     transform-origin: left;
     transform: scaleX(0);
+    color: #F0F2BB;
 }
 
 #titulo[data-scroll="in"]{
@@ -227,7 +228,7 @@ body::-webkit-scrollbar-thumb{
     padding-top: 60px;
     font-size: 50px;
     text-align: center;
-    color: rgb(227, 227, 227);
+    color: #F0F2BB;
     text-transform: uppercase;
     letter-spacing: 5px;/*Espaço entre as letras*/
     transition: 0.7s;
@@ -244,7 +245,7 @@ body::-webkit-scrollbar-thumb{
 .conteudo2 {
     margin: 0px;
     min-height: 100vh;
-    background: #3C0152;
+    background: #403D1E;
     color: seashell;
     display: flex;
     flex-wrap: wrap;
@@ -275,7 +276,7 @@ body::-webkit-scrollbar-thumb{
 
 .projects .card .face.face1{
     position: relative;/*estudara  fundo*/
-    background: #8C00AB;
+    background: #262314;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -284,7 +285,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 .projects .card:hover .face.face1{
-    background: #FBFF05;
+    background: #736F38;
     transform: translateY(0);
 }
 
@@ -299,7 +300,7 @@ body::-webkit-scrollbar-thumb{
 .projects .card .face.face1 .content h3{
     margin: 10px 0 0;
     padding: 0;
-    color: #15001C;
+    color: #F0F2BB;
     text-align: center;
     font-size: 1.5em;/*colocar espaçamento e mudar cor da letra*/
 }
